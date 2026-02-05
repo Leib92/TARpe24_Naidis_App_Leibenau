@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TARpe24_Naidis_App_Leibenau.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TARpe24_Naidis_App_Leibenau"
+    Title="TARpe24_Naidis_App_Leibenau">
+
+    <ShellContent
+        Title="Avaleht"
+        ContentTemplate="{DataTemplate local:StartPage}"
+        Route="StartPage" />
+
+</Shell>
