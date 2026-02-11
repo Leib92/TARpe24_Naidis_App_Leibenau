@@ -7,8 +7,19 @@ namespace TARpe24_Naidis_App_Leibenau
         public App()
         {
             InitializeComponent();
+        }
 
-            MainPage = new NavigationPage(new AppShell());
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            var startPage = new StartPage();
+
+            var navPage = new NavigationPage(startPage)
+            {
+                BarBackgroundColor = Colors.Blue,
+                BarTextColor = Colors.White
+            };
+
+            return new Window(navPage);
         }
     }
 }
