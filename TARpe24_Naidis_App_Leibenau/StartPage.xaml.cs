@@ -5,11 +5,10 @@ public partial class StartPage : ContentPage
 	VerticalStackLayout vst;
 	ScrollView sv;
 	public List<ContentPage> Lehed = new List<ContentPage>() { new TextPage(), new FigurePage() };
-	public List<string> LeheNimed = new List<string>() { "Tekst", "Kuhund" };
+	public List<string> LeheNimed = new List<string>() { "Tekst", "Kujund" };
 	public StartPage()
 	{
-        InitializeComponent();
-        // Title == "Avaleht"
+		// Title == "Avaleht"
         vst = new VerticalStackLayout { Padding = 20, Spacing = 15 };
 		for (int  i=0; i < Lehed.Count; i++)
 		{

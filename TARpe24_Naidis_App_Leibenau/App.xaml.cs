@@ -7,6 +7,7 @@ namespace TARpe24_Naidis_App_Leibenau
         public App()
         {
             InitializeComponent();
+
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
