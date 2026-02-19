@@ -1,6 +1,5 @@
 using Microsoft.Maui.Controls.Shapes;
 using System.Security.Cryptography.X509Certificates;
-using static AndroidX.ConstraintLayout.Core.Motion.Utils.HyperSpline;
 
 namespace TARpe24_Naidis_App_Leibenau;
 
