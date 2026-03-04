@@ -57,4 +57,26 @@ public partial class StepperSliderPage : ContentPage
         label.TextColor = Color.FromRgb((int)(255 - e.NewValue * 2.55), (int)(e.NewValue * 2.55), 128);
         label.Rotation = e.NewValue;
     }
+
+    /* rakendus RGB värvi muutmiseks.
+    void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+    {
+        if (sender == redSlider)
+        {
+            redLabel.Text = String.Format("Red = {0:X2}", (int)args.NewValue);
+        }
+        else if (sender == greenSlider)
+        {
+            greenLabel.Text = String.Format("Green = {0:2}", (int)args.NewValue);
+        }
+        else if (sender == blueSlider)
+        {
+            blueLabel.Text = String.Format("Blue = {0:X2}", (int)args.NewValue);
+        }
+
+        boxView.ColorProperty = Color.FromRgb((int)redSlider.Value,
+                                              (int)greenSlider.Value,
+                                              (int)blueSlider.Value);
+    }
+    */
 }
