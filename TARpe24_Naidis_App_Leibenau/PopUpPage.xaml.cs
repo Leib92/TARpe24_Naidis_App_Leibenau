@@ -1,9 +1,10 @@
-using Android.App;
-
 namespace TARpe24_Naidis_App_Leibenau;
 
 public partial class PopUpPage : ContentPage
 {
+	VerticalStackLayout vst;
+	ScrollView sv;
+
 	public PopUpPage()
 	{
 		// 1. Loome esimese nupu (Lihtne teade)
@@ -74,7 +75,7 @@ public partial class PopUpPage : ContentPage
 			Preferences.Default.Remove("EsimeneKäivitamine");
 
 			// Anname tagasisidet, et nullimine õnnestus
-			await DisplayAlertAsync("Edukalt nullitud", "Mälu on tühjendatud. Kui sa lege uuesti avad, käitub äpp nagu täiesti uus!", "OK")
+			await DisplayAlertAsync("Edukalt nullitud", "Mälu on tühjendatud. Kui sa lege uuesti avad, käitub äpp nagu täiesti uus!", "OK");
 		};
 
 		// Layout Nupp
