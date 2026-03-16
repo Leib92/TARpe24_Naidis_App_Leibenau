@@ -90,29 +90,32 @@ public partial class PickerImagePage : ContentPage
 
 	private Grid Taida_gr3x3()
 	{
-		gr3x3 = new Grid();
-		for (int i = 0; i < 3; i++)
-		{
-			gr3x3.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-			gr3x3.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-		}
-		for (int r = 0; r < 3; r++)
-		{
-			for (int c = 0; c < 3; c++)
-			{
-				BoxView kast = new BoxView
-				{
-					BackgroundColor = Color.FromRgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)),
-				};
-				gr3x3.Add(kast, c, r);
-				TapGestureRecognizer tap = new TapGestureRecognizer();
-				tap.Tapped += (s, args) =>
-				{
-					kast.BackgroundColor = Color.FromRgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
-				};
-				kast.GestureRecognizers.Add(tap);
-			}
-		}
-		return gr3x3;
-	}
+        gr3x3 = new Grid();
+        for (int i = 0; i < 3; i++)
+        {
+            gr3x3.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            gr3x3.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+        }
+        for (int r = 0; r < 3; r++)
+        {
+            for (int c = 0; c < 3; c++)
+            {
+                BoxView kast = new BoxView
+                {
+                    BackgroundColor = Color.FromRgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)),
+                };
+                gr3x3.Add(kast, c, r);
+                int rida = r;
+                int veerg = c;
+                TapGestureRecognizer tap = new TapGestureRecognizer();
+                tap.Tapped += async (s, args) =>
+                {
+                    kast.BackgroundColor = Color.FromRgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                    await DisplayAlertAsync("Koordinadid", $"Vajutasid lahtrisse:\nRida: {rida}\nVeerg: {veerg}", "Selge");
+                };
+                kast.GestureRecognizers.Add(tap);
+            }
+        }
+        return gr3x3;
+    }
 }
