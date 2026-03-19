@@ -81,6 +81,9 @@
 	  <MauiXaml Update="StepperSliderPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="TablePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="TextPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
